@@ -1,0 +1,18 @@
+{
+    "@@locale": "es",
+    "pickupGameAppBarTitle": "Pachanga",
+    "@pickupGameAppBarTitle": {
+        "description": "Texto mostrado en la AppBar de la página principal"
+    },
+    "createNewGameAppBarTitle": "Crear un nuevo juego",
+    "@createNewGameAppBarTitle": {
+        "description": "Texto mostrado en la AppBar de la página Crear Juego"
+    },
+    "chooseField": "Escoger campo",
+    "chooseDateHour": "Escoger fecha y hora",
+    "selectDate": "Seleccionar fecha",
+    "selectStartHour": "Seleccionar hora inicio",
+    "selectEndHour": "Seleccionar hora final",
+    "addPlayers": "Añade jugadores",
+    "chooseGameType": "Escoger tipo de juego"
+}

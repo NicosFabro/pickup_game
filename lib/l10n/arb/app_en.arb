@@ -1,0 +1,18 @@
+{
+    "@@locale": "en",
+    "pickupGameAppBarTitle": "Pickup Game",
+    "@pickupGameAppBarTitle": {
+        "description": "Text shown in the AppBar of the Home Page"
+    },
+    "createNewGameAppBarTitle": "Create a new game",
+    "@createNewGameAppBarTitle": {
+        "description": "Text shown in the AppBar of the Create New Game Page"
+    },
+    "chooseField": "Choose field",
+    "chooseDateHour": "Choose date & hour",
+    "selectDate": "Select date",
+    "selectStartHour": "Select start hour",
+    "selectEndHour": "Select end hour",
+    "addPlayers": "Add players",
+    "chooseGameType": "Choose gameType"
+}
