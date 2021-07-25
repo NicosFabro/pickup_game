@@ -71,12 +71,7 @@ class GamesBloc extends Bloc<GamesEvent, GamesState> {
   Stream<GamesState> _mapGamesUpdatedToState(
     GamesUpdated event,
   ) async* {
-    yield state.copyWith(status: GamesStatus.loading);
-    try {
-      yield state.copyWith(games: event.games, status: GamesStatus.success);
-    } catch (_) {
-      yield state.copyWith(status: GamesStatus.failure);
-    }
+    yield state.copyWith(games: event.games, status: GamesStatus.success);
   }
 
   @override

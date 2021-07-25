@@ -16,8 +16,8 @@ class GamesState extends Equatable {
   final GamesStatus status;
 
   GamesState copyWith({
-    GamesStatus? status,
     List<Game>? games,
+    GamesStatus? status,
   }) {
     return GamesState(
       games: games ?? this.games,

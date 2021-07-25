@@ -170,7 +170,6 @@ void main() {
         build: () => gamesBloc,
         act: (bloc) => bloc.add(GamesUpdated(games)),
         expect: () => [
-          const GamesState(status: GamesStatus.loading),
           GamesState(status: GamesStatus.success, games: games),
         ],
       );

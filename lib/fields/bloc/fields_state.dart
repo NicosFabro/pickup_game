@@ -16,8 +16,8 @@ class FieldsState extends Equatable {
   final FieldsStatus status;
 
   FieldsState copyWith({
-    FieldsStatus? status,
     List<Field>? fields,
+    FieldsStatus? status,
   }) {
     return FieldsState(
       fields: fields ?? this.fields,

@@ -118,7 +118,6 @@ void main() {
         build: () => fieldsBloc,
         act: (bloc) => bloc.add(FieldsUpdated(fields: fields)),
         expect: () => [
-          const FieldsState(status: FieldsStatus.loading),
           FieldsState(status: FieldsStatus.success, fields: fields),
         ],
       );
