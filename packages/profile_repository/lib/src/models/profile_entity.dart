@@ -27,7 +27,7 @@ class ProfileEntity extends Equatable {
   static ProfileEntity fromSnapshot(DocumentSnapshot snap) => ProfileEntity(
         snap.get('id'),
         snap.get('nickname'),
-        (snap.get('availableTeams') as List<String>),
+        (snap.get('availableTeams') as List<dynamic>).cast<String>(),
       );
 
   Map<String, dynamic> toDocument() => {

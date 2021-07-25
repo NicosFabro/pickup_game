@@ -20,7 +20,7 @@ import 'package:game_repository/game_repository.dart';
 
 // App
 import 'package:pickup_game/app/app.dart';
-import 'package:pickup_game/app/app_bloc_observer.dart';
+import 'package:pickup_game/app/bloc_observer.dart';
 
 void main() async {
   Bloc.observer = AppBlocObserver();
