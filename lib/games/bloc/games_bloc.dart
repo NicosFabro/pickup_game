@@ -47,13 +47,25 @@ class GamesBloc extends Bloc<GamesEvent, GamesState> {
   Stream<GamesState> _mapGamePostRequestedToState(
     GamePostRequested event,
   ) async* {
-    await gameRepository.addNewGame(event.game);
+    yield state.copyWith(status: GamesStatus.loading);
+    try {
+      await gameRepository.addNewGame(event.game);
+      yield state.copyWith(status: GamesStatus.success);
+    } catch (_) {
+      yield state.copyWith(status: GamesStatus.failure);
+    }
   }
 
   Stream<GamesState> _mapGamePushRequestedToState(
     GamePushRequested event,
   ) async* {
-    await gameRepository.editGame(event.game);
+    yield state.copyWith(status: GamesStatus.loading);
+    try {
+      await gameRepository.editGame(event.game);
+      yield state.copyWith(status: GamesStatus.success);
+    } catch (_) {
+      yield state.copyWith(status: GamesStatus.failure);
+    }
   }
 
   Stream<GamesState> _mapGamesUpdatedToState(
