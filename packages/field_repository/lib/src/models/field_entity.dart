@@ -16,10 +16,10 @@ class FieldEntity extends Equatable {
   final String logoUrl;
 
   Map<String, dynamic> toJson() => {
-        "id": id,
-        "name": name,
-        "address": address,
-        "logoUrl": logoUrl,
+        'id': id,
+        'name': name,
+        'address': address,
+        'logoUrl': logoUrl,
       };
 
   static FieldEntity fromJson(Map<String, dynamic> json) => FieldEntity(
@@ -37,9 +37,9 @@ class FieldEntity extends Equatable {
       );
 
   Map<String, dynamic> toDocument() => {
-        "name": name,
-        "address": address,
-        "logoUrl": logoUrl,
+        'name': name,
+        'address': address,
+        'logoUrl': logoUrl,
       };
 
   @override

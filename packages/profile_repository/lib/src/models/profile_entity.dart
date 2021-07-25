@@ -13,9 +13,9 @@ class ProfileEntity extends Equatable {
   final List<String> availableTeams;
 
   Map<String, dynamic> toJson() => {
-        "id": id,
-        "nickname": nickname,
-        "availableTeams": availableTeams,
+        'id': id,
+        'nickname': nickname,
+        'availableTeams': availableTeams,
       };
 
   static ProfileEntity fromJson(Map<String, dynamic> json) => ProfileEntity(
@@ -27,13 +27,13 @@ class ProfileEntity extends Equatable {
   static ProfileEntity fromSnapshot(DocumentSnapshot snap) => ProfileEntity(
         snap.get('id'),
         snap.get('nickname'),
-        snap.get('availableTeams').cast<String>().toList(),
+        (snap.get('availableTeams') as List<String>),
       );
 
   Map<String, dynamic> toDocument() => {
-        "id": id,
-        "nickname": nickname,
-        "availableTeams": availableTeams,
+        'id': id,
+        'nickname': nickname,
+        'availableTeams': availableTeams,
       };
 
   @override

@@ -22,13 +22,13 @@ class GameEntity extends Equatable {
   final Map<String, String> players;
 
   Map<String, dynamic> toJson() => {
-        "id": id,
-        "fieldId": fieldId,
-        "dateStart": dateStart,
-        "dateEnd": dateEnd,
-        "gameType": gameType,
-        "footballType": footballType,
-        "players": players,
+        'id': id,
+        'fieldId': fieldId,
+        'dateStart': dateStart,
+        'dateEnd': dateEnd,
+        'gameType': gameType,
+        'footballType': footballType,
+        'players': players,
       };
 
   static GameEntity fromJson(Map<String, dynamic> json) => GameEntity(
@@ -44,8 +44,8 @@ class GameEntity extends Equatable {
   static GameEntity fromSnapshot(DocumentSnapshot snap) => GameEntity(
         snap.get('id'),
         snap.get('fieldId'),
-        snap.get('dateStart').toDate(),
-        snap.get('dateEnd').toDate(),
+        (snap.get('dateStart') as Timestamp).toDate(),
+        (snap.get('dateEnd') as Timestamp).toDate(),
         snap.get('gameType'),
         snap.get('footballType'),
         (snap.get('players') as Map).map<String, String>(
@@ -54,13 +54,13 @@ class GameEntity extends Equatable {
       );
 
   Map<String, dynamic> toDocument() => {
-        "id": id,
-        "fieldId": fieldId,
-        "dateStart": dateStart,
-        "dateEnd": dateEnd,
-        "gameType": gameType,
-        "footballType": footballType,
-        "players": players,
+        'id': id,
+        'fieldId': fieldId,
+        'dateStart': dateStart,
+        'dateEnd': dateEnd,
+        'gameType': gameType,
+        'footballType': footballType,
+        'players': players,
       };
 
   @override
