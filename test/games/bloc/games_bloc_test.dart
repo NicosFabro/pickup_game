@@ -2,6 +2,7 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
+// Games
 import 'package:game_repository/game_repository.dart';
 import 'package:pickup_game/games/bloc/games_bloc.dart';
 
@@ -165,10 +166,11 @@ void main() {
       ];
 
       blocTest<GamesBloc, GamesState>(
-        'emits [success] when GamesUpdated sucess',
+        'emits [success] when GamesUpdated success',
         build: () => gamesBloc,
         act: (bloc) => bloc.add(GamesUpdated(games)),
         expect: () => [
+          const GamesState(status: GamesStatus.loading),
           GamesState(status: GamesStatus.success, games: games),
         ],
       );

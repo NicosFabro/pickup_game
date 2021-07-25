@@ -60,7 +60,12 @@ class FieldsBloc extends Bloc<FieldsEvent, FieldsState> {
   Stream<FieldsState> _mapFieldsUpdated(
     FieldsUpdated event,
   ) async* {
-    yield state.copyWith(fields: event.fields, status: FieldsStatus.success);
+    yield state.copyWith(status: FieldsStatus.loading);
+    try {
+      yield state.copyWith(fields: event.fields, status: FieldsStatus.success);
+    } catch (_) {
+      yield state.copyWith(status: FieldsStatus.failure);
+    }
   }
 
   @override
